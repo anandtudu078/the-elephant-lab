@@ -18,6 +18,7 @@ export default function Hero() {
   useEffect(() => {
     const current = phrases[index];
     let timer: NodeJS.Timeout;
+
     if (!deleting) {
       if (text.length < current.length) {
         timer = setTimeout(() => setText(current.slice(0, text.length + 1)), 50);
@@ -37,6 +38,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+      {/* Subtle gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-lab-accent/5 via-transparent to-lab-glow/10 dark:from-lab-accent/20 dark:to-transparent" />
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -45,7 +47,7 @@ export default function Hero() {
         className="relative z-10 max-w-3xl text-center"
       >
         <ElephantMascot />
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 mt-8">
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mt-8 mb-6">
           The Elephant Lab
         </h1>
         <div className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl px-8 py-6 font-mono text-lg md:text-2xl shadow-2xl">
