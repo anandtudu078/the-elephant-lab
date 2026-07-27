@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import ElephantMascot from "./ElephantMascot";
+import AnimatedElephant from "./AnimatedElephant";
 
 const phrases = [
   "What problem are you solving today?",
@@ -39,22 +39,28 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
       {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-lab-accent/5 via-transparent to-lab-glow/10 dark:from-lab-accent/20 dark:to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-lab-accent/5 via-transparent to-lab-glow/10 dark:from-lab-accent/20 dark:to-transparent z-0" />
+
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="relative z-10 max-w-3xl text-center"
       >
-        <ElephantMascot />
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mt-8 mb-6">
-          The Elephant Lab
-        </h1>
-        <div className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl px-8 py-6 font-mono text-lg md:text-2xl shadow-2xl">
+        {/* Heading with elephant behind it */}
+        <div className="relative inline-block">
+          <AnimatedElephant />
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight relative z-10">
+            The Elephant Lab
+          </h1>
+        </div>
+
+        <div className="mt-8 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl px-8 py-6 font-mono text-lg md:text-2xl shadow-2xl">
           <span className="text-lab-accent mr-2">elephant.ai &gt;</span>
           <span>{text}</span>
           <span className="animate-pulse ml-1">|</span>
         </div>
+
         <p className="mt-8 text-gray-600 dark:text-gray-400 text-lg max-w-xl mx-auto">
           We research, build, and scale AI systems that don’t just think—they remember. Your data, our experiments, real results.
         </p>
