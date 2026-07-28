@@ -20,7 +20,7 @@ export default async function BlogPostPage({
 
   if (!post) notFound();
 
-  const mdxSource = await serialize(post.content);
+  const mdxSource = await serialize(post.content);   // ✅ generate real MDX source
 
   return (
     <main>
@@ -39,7 +39,7 @@ export default async function BlogPostPage({
             )}
           </div>
 
-          <MdxContent source={mdxSource} />
+          <MdxContent source={mdxSource} />   {/* ✅ pass real serialized source */}
         </div>
       </article>
       <Footer />
