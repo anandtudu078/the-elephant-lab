@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import AnimatedElephant from "./AnimatedElephant";
+import ParticleBackground from "./ParticleBackground";
 
 const phrases = [
   "What problem are you solving today?",
@@ -38,7 +39,10 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
-      {/* Subtle gradient background */}
+      {/* Particle network background */}
+      <ParticleBackground />
+
+      {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-lab-accent/5 via-transparent to-lab-glow/10 dark:from-lab-accent/20 dark:to-transparent z-0" />
 
       <motion.div
