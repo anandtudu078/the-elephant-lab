@@ -7,7 +7,7 @@ const team = [
     name: "Anand Tudu",
     role: "Founder & AI Research Lead",
     bio: "Former DeepMind researcher. Specializes in large language models and reinforcement learning.",
-    image: "/team/https://pbs.twimg.com/profile_images/2037478488295497728/eynpJrbA_400x400.jpg",          // 👈 replace with your image path
+    image: "https://pbs.twimg.com/profile_images/2037478488295497728/eynpJrbA_400x400.jpg",          // 👈 replace with your image path
     linkedin: "https://www.linkedin.com/in/anand-tudu-60263a212/",                       // 👈 replace with real LinkedIn URL
     twitter: "https://x.com/AnandTudu_078",                        // 👈 replace with real X (Twitter) URL
   },
