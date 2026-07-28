@@ -7,40 +7,28 @@ const team = [
     role: "Founder & AI Research Lead",
     bio: "Former DeepMind researcher. Specializes in large language models and reinforcement learning.",
     avatar: "🧠",
-    socials: {
-      linkedin: "#",
-      twitter: "#",
-    },
+    socials: { linkedin: "#", twitter: "#" },
   },
   {
     name: "Rajiv Menon",
     role: "Co‑founder & ML Engineer",
     bio: "Built AI pipelines at Stripe and Uber. Loves turning research papers into production code.",
     avatar: "⚡",
-    socials: {
-      linkedin: "#",
-      twitter: "#",
-    },
+    socials: { linkedin: "#", twitter: "#" },
   },
   {
     name: "Priya Kapoor",
     role: "Product & Strategy",
     bio: "Ex‑McKinsey. Translates complex AI capabilities into products people actually use.",
     avatar: "🎯",
-    socials: {
-      linkedin: "#",
-      twitter: "#",
-    },
+    socials: { linkedin: "#", twitter: "#" },
   },
   {
     name: "Arjun Das",
     role: "Full‑Stack AI Engineer",
     bio: "Open‑source contributor. Builds the infrastructure that makes our models run at scale.",
     avatar: "💻",
-    socials: {
-      linkedin: "#",
-      twitter: "#",
-    },
+    socials: { linkedin: "#", twitter: "#" },
   },
 ];
 
