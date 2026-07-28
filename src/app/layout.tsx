@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
+import PageTransition from "@/components/PageTransition";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -34,7 +35,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans">
         <CustomCursor />
-        {children}
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );
