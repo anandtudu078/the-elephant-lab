@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import WhatWeDo from "@/components/WhatWeDo";
 import OurWork from "@/components/OurWork";
 import Process from "@/components/Process";
+import Team from "@/components/Team";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <WhatWeDo />
       <OurWork />
       <Process />
+      <Team />
       <Footer />
     </main>
   );
