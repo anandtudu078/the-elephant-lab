@@ -6,7 +6,7 @@ const team = [
     name: "Dr. Ananya Sharma",
     role: "Founder & AI Research Lead",
     bio: "Former DeepMind researcher. Specializes in large language models and reinforcement learning.",
-    avatar: "🧠", // Replace with actual image URL later
+    avatar: "🧠",
     socials: {
       linkedin: "#",
       twitter: "#",
@@ -59,19 +59,14 @@ function TeamCard({
       transition={{ duration: 0.5, delay, ease: "easeOut" }}
       className="group relative bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-lab-accent/30"
     >
-      {/* Avatar */}
       <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-lab-accent/20 to-lab-glow/20 dark:from-lab-accent/30 dark:to-transparent flex items-center justify-center text-4xl mb-6 group-hover:scale-105 transition-transform duration-300">
         {member.avatar}
       </div>
-
-      {/* Info */}
       <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
       <p className="text-lab-accent text-sm font-medium mb-3">{member.role}</p>
       <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6">
         {member.bio}
       </p>
-
-      {/* Socials */}
       <div className="flex gap-3">
         <a
           href={member.socials.linkedin}
@@ -105,7 +100,6 @@ export default function Team() {
           A small, focused team of AI researchers and engineers obsessed with building intelligence that remembers.
         </p>
       </motion.div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {team.map((member, i) => (
           <TeamCard key={member.name} member={member} delay={i * 0.1} />
