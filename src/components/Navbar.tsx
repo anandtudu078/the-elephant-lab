@@ -38,7 +38,6 @@ export default function Navbar() {
         <div className="flex items-center gap-6 text-sm font-medium">
           <Link href="/about">About</Link>
           <Link href="/work">Work</Link>
-          <Link href="/tools">Tools</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/blog">Blog</Link>
           <button
