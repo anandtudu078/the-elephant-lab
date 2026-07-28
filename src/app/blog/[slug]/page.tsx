@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getPostBySlug, getAllPosts } from "@/lib/blog";
 import { notFound } from "next/navigation";
+import { serialize } from "next-mdx-remote/serialize";
 import MdxContent from "@/components/MdxContent";
 
 export async function generateStaticParams() {
@@ -18,6 +19,8 @@ export default async function BlogPostPage({
   const post = getPostBySlug(slug);
 
   if (!post) notFound();
+
+  const mdxSource = await serialize(post.content);
 
   return (
     <main>
@@ -36,8 +39,7 @@ export default async function BlogPostPage({
             )}
           </div>
 
-          <MdxContent source={{ compiledSource: "", renderedOutput: "" }} />
-          {/* Note: need to actually pass the MDX source properly. Let's fix that. */}
+          <MdxContent source={mdxSource} />
         </div>
       </article>
       <Footer />
